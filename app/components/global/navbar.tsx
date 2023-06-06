@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../../../public/logo1.svg";
+import SignIn from "../auth/signin";
+import SignUp from "../auth/signup";
 
 export default function Navbar() {
   return (
@@ -26,16 +28,15 @@ export default function Navbar() {
 
       <div>
         <input
-          class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-          type="search"
-          name="search"
+          className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
           placeholder="Search"
         />
       </div>
 
       <div className="space-x-8 text-2xl">
         <a>Current Bets</a>
-        <a>Streamer Login</a>
+
+        <SignIn />
       </div>
     </div>
   );

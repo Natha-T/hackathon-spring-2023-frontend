@@ -1,6 +1,7 @@
-import "./globals.css";
 import { Inter } from "next/font/google";
-
+import { ClerkProvider } from "@clerk/nextjs";
+import { useRouter } from "next/router";
+import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -14,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="eng">
-      <body className="">{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className="">{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }

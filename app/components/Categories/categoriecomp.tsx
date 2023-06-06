@@ -9,7 +9,8 @@ export default function CategorieComp() {
       <div className="grid grid-cols-4 gap-8 pt-16 mx-auto container">
         <CategorieCard />
         <CategorieCard />
-        <CategorieCard /> <CategorieCard />
+        <CategorieCard />
+        <CategorieCard />
       </div>
       <div className="pt-10  flex justify-center">
         <button className="px-5 py-3 bg-black text-white ">
