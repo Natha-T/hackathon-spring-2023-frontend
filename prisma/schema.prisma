@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id  String @id
+  email String @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  summonerId String?
+  wallet String?
+  isStreamer Boolean @default(false)
+  isViewer Boolean @default(true)
+  stat Stat?
+  viewer Viewer?
+}
+
+model Stat {
+  id String @id @default(uuid())
+  numOfViewers Int?
+  numOfBetsPlaced Int?
+  hoursStreamed DateTime?
+  totalPayouts Float?
+  monthlyEarnings Float?
+  monthlyFee Float?
+  totalEarnings Float?
+  totalFollowers Int?
+
+  user User @relation(fields: [userId], references: [id])
+  userId String @unique
+}
+
+model Viewer {
+  id String @id @default(uuid())
+  currentBet Float?
+  totalBet Float?
+  numOfBetsPlaced Int?
+
+  user User @relation(fields: [userId], references: [id])
+  userId String @unique
+}
