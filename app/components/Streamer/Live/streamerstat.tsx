@@ -1,18 +1,15 @@
 import React from "react";
-import insta from "../../../public/insta.svg";
-import twitter from "../../../public/twitter.svg";
-import youtube from "../../../public/youtube.svg";
-import Twitch from "../../../public/twitch.svg";
 
-export default function StreamerLink() {
+export default function StreamerStat() {
   return (
     <div className="px-12 border-2 border-gray-200">
-      <div className="border-b-2 pb-4">
+      <div className="border-b-2 pb-4 flex">
         <h1 className="text-center px-32 pt-6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           ab blanditiis, omnis corrupti ratione officia dolores consectetur
           aliquid harum, quibusdam, quia voluptatem. Quisquam, voluptatum
         </h1>
+        <button className="px-8 my-3 rounded-lg bg-gray-600">Edit</button>
       </div>
       <div className="flex justify-between gap-12 w-full">
         {" "}
@@ -27,10 +24,10 @@ export default function StreamerLink() {
           </div>
         </div>{" "}
         <div className="w-1/2">
-          <div className="">
+          <div className="w-full">
             {" "}
             <h2 className=" pt-2">Socials</h2>
-            <div className=" flex  gap-4 ">
+            <div className=" flex pt-4 gap-4 ">
               <svg
                 width="32"
                 height="32"
@@ -115,6 +112,9 @@ export default function StreamerLink() {
                 />
               </svg>
             </div>
+            <button className="  pt-4  px-4 py-3 rounded-lg bg-gray-600">
+              Manage
+            </button>
           </div>
         </div>
       </div>

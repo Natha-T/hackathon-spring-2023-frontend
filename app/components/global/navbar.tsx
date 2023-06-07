@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import logo from "../../../public/logo1.svg";
 import SignIn from "../auth/signin";
 import SignUp from "../auth/signup";
+import { SignOutButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
@@ -37,6 +39,9 @@ export default function Navbar() {
         <a>Current Bets</a>
 
         <SignIn />
+        <SignOutButton>
+          <button>Sign in with Clerk</button>
+        </SignOutButton>
       </div>
     </div>
   );

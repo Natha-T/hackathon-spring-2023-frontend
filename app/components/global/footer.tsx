@@ -31,6 +31,7 @@ export default function Footer() {
           <div className="grid ">
             <a>Home</a>
             <a>About</a>
+
             <a>Browse</a>
           </div>
           <div className="grid ">
