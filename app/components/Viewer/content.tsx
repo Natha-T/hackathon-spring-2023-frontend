@@ -5,7 +5,7 @@ import PubSecond from "./pubsecond";
 
 export default function Content() {
   return (
-    <div className=" bg-gray-800 flex gap-6 p-7">
+    <div className=" bg-gray-800 flex gap-6 p-7 text-white">
       <div className="grid space-y-4 w-3/4">
         <StreamerLink />
         <PoolDetail />
